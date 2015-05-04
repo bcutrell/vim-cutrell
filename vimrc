@@ -2,7 +2,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-
 set ruler
 set cursorline
 set number
@@ -13,24 +12,21 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 
-syntax enable
+" colorscheme railscasts
+set guifont=Monaco:h13
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
-set background=dark
-let g:solarized_termcolors=16
-
-
-""nmap ,f :FufFileWithCurrentBufferDir<CR>
-""nmap ,s :FufFile<CR>
-""nmap ,b :FufBuffer<CR>
-""nmap ,t :FufTaggedFile<CR>
-
-
-nmap ,t :CtrlP<CR>
-nmap ,b :CtrlPBuffer<CR>
-
-nmap ,d :NERDTreeFind<CR>
-
 
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
+nmap ,t :CtrlP<CR>
+nmap ,b :CtrlPBuffer<CR>
+nmap ,d :NERDTreeFind<CR>
+
+let g:multi_cursor_use_default_mapping=0
+" Default mapping
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
